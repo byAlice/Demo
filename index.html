@@ -2,14 +2,17 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>丁甲鹏—前端开发</title>
-	<meta name="author" content="byAlice" />
-	<meta name="description" content="" />
-	<meta name="keywords"  content="byAlice 前端 简历" />
-	<meta name="Resource-type" content="Document" />
+	<title>练习</title>
+
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<script src="js/jquery-1.11.2.min.js"></script>
+	<!--<script src="js/jquery-1.11.2.min.js"></script>-->
+	<script type="text/javascript" src="http://www.5imoban.net/download/jquery/jquery-1.8.3.min.js"></script>
+
+	<!--jquery.event.drag-1.5.min.js是鼠标拖动插件，如果不需要，可以删除-->
+	<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
+	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
+
 	<script src="js/jquery.easing.min.js"></script>
 	<script src="js/jquery.fullPage.min.js"></script>
 	<script src="js/index.js"></script>
@@ -17,53 +20,72 @@
 </head>
 <body>
 <!-- header navigation -->
-<header>
+<header class="header">
 	<div id="logo">
-		<div id="header_img"><img src="img/logo.jpg" alt="" title="Hello,wish you have a good mood!" /></div>
+		<div id="header_img"><img src="images/logo.png" alt=""/></div>
 	</div>
+	<span class="words">专注技术开发</span>
+
 	<nav>
         <ul>
 			<li><a href="">首页</a></li>
-			<li><a href="http://byalice.github.io/" target="_blank">博客</a></li>
-			<li><a href="https://github.com/byAlice" target="_blank">github</a></li>
+			<li><a href="" >业务</a></li>
+			<li><a href="" >APP案例</a></li>
+			<li><a href="" >硬件案例</a></li>
+			<li><a href="" >服务器案例</a></li>
+			<li><a href="" >微信开发</a></li>
         </ul>
     </nav>
+	<div class="phone">
+		<i></i>
+		<a href="#" title="免费咨询热线"><span>0755-86503505</span></a><u></u>
+	</div>
 </header>
 <!-- header navigation end -->
 <!-- aside navigation -->
-<aside>
+<!--<aside>
 	<a href="#page1"><b>首页</b></a>
 	<a href="#page2"><b>关于我</b></a>
 	<a href="#page3"><b>专业技能</b></a>
 	<a href="#page4"><b>我的作品</b></a>
 	<a href="#page5"><b>联系我</b></a>
-</aside>
+</aside>-->
 <!-- aside navigation end -->
 <!-- home page -->
+<div class="welcome"><p>Loading . . .</p></div>
 <div id="dowebok">
 	<!-- home -->
 	<div class="section one">
-		<div id="home">
-			<div id="home_content">
-				<div id="home_head">
-					<div id="home_head_content">
-						<img src="img/me.png" id="home_photo1" alt="" title="非常感激您可以有时间来阅读我的简历" />
-						<img src="img/me-web.png" id="home_photo2" alt="" title="非常感激您可以有时间来阅读我的简历" />
-					</div>
-				</div>
-				<div id="home_info">
-					<p id="home_info1">既然选择了远方，便只管风雨兼程！</p>
-					<div id="home_info_box">
-						<p id="home_info2">我叫丁甲鹏</p>
-						<p id="home_info3">22岁</p>
-						<p id="home_info4">渴望成为一名优秀前端开发工程师</p>
-						<p id="home_info5">e-mail：1533674340@qq.com</p>
-						<p id="home_info6">TEL：13782953667</p>
-					</div>
-				</div>
+		<!--轮播图-->
+		<div class="main_visual">
+			<div class="flicking_con">
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+			<div class="main_image">
+				<ul>
+					<li class="n1">
+						<span class="img_1"></span>
+						<div class="box">
+							<div class="left"></div>
+							<div class="right">
+								<span>年专注，软硬件开发</span>
+								<i></i>
+								<p>始于 2011 - 2016 展望未来<br />专注于APP开发，专业于解决方案</p>
+							</div>
+						</div>
+					</li>
+					<li class="n2"><span class="img_2"></span></li>
+					<li class="n3"><span class="img_3"></span></li>
+					<li class="n4"><span class="img_4"></span></li>
+				</ul>
+				<a href="javascript:;" id="btn_prev"></a>
+				<a href="javascript:;" id="btn_next"></a>
 			</div>
 		</div>
-	</div>
+</div>>
 	<!-- home end -->
 	<!-- about -->
 	<div class="section two">

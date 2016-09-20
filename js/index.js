@@ -1,15 +1,78 @@
+
 $(function(){
 
 	$('#dowebok').fullpage({
 		scrollingSpeed: 400,
 		css3: true,
 		resize: true,
-		anchors: ["page1","page2","page3","page4","page5"],
+		anchors: ["page1","page2","page3","page4","page5","page6"],
 		verticalCentered: false,
 		afterLoad: function(anchorLink,index){
+			/*$('.welcome').remove();*/
+			/*预加载*/
+			setTimeout(function () {
+				$(".welcome").css("display","none");
+			},10);
 			if(index==1){
-				$("#home").css({"display":"block"}).addClass("home_zoom");	//第一页主页面变为不透明，背景图变化
-				$("aside").css({"top":($(".active").height()-$("aside").height())/2});	//侧边栏定高
+				$(".header").css({"backgroundColor":"transparent"});	//头部透明
+
+				$(document).ready(function(){
+
+					/* $(".main_visual").hover(function(){
+					 $("#btn_prev,#btn_next").fadeIn()
+					 },function(){
+					 $("#btn_prev,#btn_next").fadeOut()
+					 });*/
+
+					$dragBln = false;
+
+					$(".main_image").touchSlider({
+						flexible : true,
+						speed : 200,
+						btn_prev : $("#btn_prev"),
+						btn_next : $("#btn_next"),
+						paging : $(".flicking_con a"),
+						counter : function (e){
+							$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
+						}
+					});
+
+					$(".main_image").bind("mousedown", function() {
+						$dragBln = false;
+					});
+
+					$(".main_image").bind("dragstart", function() {
+						$dragBln = true;
+					});
+
+					$(".main_image a").click(function(){
+						if($dragBln) {
+							return false;
+						}
+					});
+
+					timer = setInterval(function(){
+						$("#btn_next").click();
+					}, 5000);
+
+					$(".main_visual").hover(function(){
+						clearInterval(timer);
+					},function(){
+						timer = setInterval(function(){
+							$("#btn_next").click();
+						},5000);
+					});
+
+					$(".main_image").bind("touchstart",function(){
+						clearInterval(timer);
+					}).bind("touchend", function(){
+						timer = setInterval(function(){
+							$("#btn_next").click();
+						}, 5000);
+					});
+
+				});
+				/*$("aside").css({"top":($(".active").height()-$("aside").height())/2});	//侧边栏定高
 				$("#home_head").css({"margin-top":"15%"});		//头像margin-top改变
 				$("aside a").eq(0).addClass("selected").siblings().removeClass("selected");
 				$("header").animate({opacity:"1"},1000,function(){
@@ -34,7 +97,7 @@ $(function(){
 					$(this).fadeTo(800,1);
 				},function(){
 					$(this).stop(true,false).fadeTo(800,0);
-				});
+				});*/
 			}
 			if(index==2){
 				$("aside a").eq(1).addClass("selected").siblings().removeClass("selected");

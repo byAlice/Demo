@@ -1,6 +1,12 @@
 ﻿@charset "utf-8";
 
 /* global */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
 body {
 	height: 100%;	
 	position: relative;
@@ -63,67 +69,258 @@ h3{
 header {
 	position: fixed;
 	width: 100%;
+	height: 72px;
 	top: 0;
 	left: 0;
 	z-index: 100;
-	background: #f2f2f2;
-	opacity: 0;
+	background: #67696a;
+
 }
 #logo {
 	float: left;
-	margin: 10px 30px;
+	margin: 2px 30px;
 }
 header img {
 	margin-top: 5px;
-	width: 50px;
-	height: 50px;
-	border-radius: 25px;
-	-webkit-transition: box-shadow 0.5s;
-	transition: box-shadow 0.5s;
+	width: 200px;
+	height: 62px;
+
 }
-header img:hover {
-	box-shadow: 0 0 15px #1FAEFF;
+.words{
+	color: #cccccc;
+	display: inline-block;
+	line-height: 72px;
+	float: left;
+}
+nav {
+
+	line-height: 72px;
+	margin-left: 60px;
+	float: left;
 }
 
-nav {
-	margin-top: 10px;
-	margin-right: 60px;
-}
-nav {
-	float: right;
-}
 nav li {
 	float: left;
 	margin: 0 20px;
 	list-style: none;
 }
 nav li a {
-	font-size: 14px;
+	font-size: 20px;
+	line-height: 32px;
 	padding: 20px 0;
 	position: relative;	
-	color: #666;
+	color: #cccccc;
 }
 nav li a:after {
 	content: "";
 	position: absolute;
-	left: 50%;
-	right: 50%;
-	bottom: 0;
+	width: 0;
+	left: 0;
+	right: 0;
+	top: 0;
 	height: 2px;
-	background: #1FAEFF;
-	opacity: 0;
+	background: #00e4b8;
+	/*opacity: 0;*/
 	-webkit-transition: .2s ease-in;
 	transition: .2s ease-in;
 }
 nav li a:hover {
-	color: #000;
+	color: #00e4b8;
 }
 nav li a:hover:after {
-	left: 0;
-	right: 0;
-	opacity: 1;
+	width: 100%;
+	/*opacity: 1;*/
 }
-@media screen and (max-width:1366px){
+
+.phone{
+	line-height: 72px;
+	margin-left: 35px;
+	font-size: 22px;
+}
+.phone a{
+	color: #00e4b8;
+	line-height: 30px;
+}
+.phone i{
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	background: url("../images/icons.png") 0 0;
+}
+.welcome{
+	width: 100%;
+	height: 100%;
+	background: url("../images/welcome.jpg");
+	background-color: #ffffff;
+	position: fixed;
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-transition: all .3s ease-in-out .5s;
+	-moz-transition: all .3s ease-in-out .5s;
+	-ms-transition: all .3s ease-in-out .5s;
+	-o-transition: all .3s ease-in-out .5s;
+	transition: all .3s ease-in-out .5s;
+	z-index: 999;
+}
+.welcome p {
+	display: block;
+	position: absolute;
+	width: 370px;
+	height: 30px;
+	padding-top: 240px;
+	top: 50%;
+	left: 50%;
+	margin-top: -135px;
+	margin-left: -185px;
+	color: #2fd0b5;
+	font-size: 20px;
+	text-align: center;
+	background: url(../images/welcome_words.png) no-repeat;
+	overflow: hidden;
+}
+/*轮播图*/
+/* main_image */
+.main_visual {
+	height: 100%;
+	border-top: 1px solid #d7d7d7;
+	overflow: hidden;
+	position: relative;
+}
+
+.main_image {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.main_image ul {
+	width: 9999px;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+
+.main_image li {
+	float: left;
+	width: 100%;
+	height: 100%;
+	/*position: relative;*/
+}
+
+.main_image li span {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.main_image li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.main_image li .img_1 {
+	background: url('../images/wallpaper1_1.jpg');
+	background-size: cover;
+	-moz-background-size: cover;
+}
+
+.main_image li .img_2 {
+	background: url('../images/wallpaper1_2.jpg');
+	background-size: cover;
+	-moz-background-size: cover;
+}
+
+.main_image li .img_3 {
+	background: url('../images/wallpaper1_3.jpg');
+	background-size: cover;
+	-moz-background-size: cover;
+}
+
+.main_image li .img_4 {
+	background: url('../images/wallpaper1_4.jpg');
+	background-size: cover;
+	-moz-background-size: cover;
+}
+/*文字描述*/
+.main_image li .box{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	z-index: 999;
+}
+li.n1 .box .left{
+	position: absolute;
+	left: -300px;
+	width: 123px;
+	height: 231px;
+	background: url(../images/words.png) no-repeat top right;
+	-moz-opacity: 0;
+	opacity: 1;
+	-webkit-transition: all .5s ease-in-out 0s;
+	-moz-transition: all .5s ease-in-out 0s;
+	-ms-transition: all .5s ease-in-out 0s;
+	-o-transition: all .5s ease-in-out 0s;
+	transition: all .5s ease-in-out 0s;
+	z-index: 1000;
+}
+/*.box .left {
+	left: 0;
+	-moz-opacity: 1;
+	opacity: 1;
+}*/
+div.flicking_con {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	z-index: 9999;
+	width: 208px;
+	margin-left: -104px;
+	height: 4px;
+}
+
+div.flicking_con a {
+	float: left;
+	width: 40px;
+	height: 4px;
+	background-color: #ffffff;
+	margin: 0 6px;
+	padding: 0;
+	/*background: url('../images/btn_main_img.png') 0 0 no-repeat;*/
+	display: block;
+	text-indent: -1000px
+}
+
+div.flicking_con a.on {
+	background-color: #00aa88;
+}
+
+/*#btn_prev, #btn_next {
+	z-index: 11111;
+	position: absolute;
+	width: 73px !important;
+	height: 74px !important;
+	top: 50%;
+	margin-top: -37px;
+	display: none;
+}*/
+
+/*#btn_prev {
+	background: url(../images/hover_left.png) no-repeat left top;
+	left: 100px;
+}
+
+#btn_next {
+	background: url(../images/hover_right.png) no-repeat right top;
+	right: 100px;
+}*/
+
+/*@media screen and (max-width:1366px){
 #header {
 	height: 60px;
 	z-index: -999;
@@ -131,10 +328,8 @@ nav li a:hover:after {
 #logo {
 	margin: 0 30px;
 }
-/*nav {
-	margin-top: 18px;
+
 }*/
-}
 /* aside */
 aside {
 	position: fixed;
