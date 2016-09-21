@@ -6,7 +6,8 @@ $(function(){
 		css3: true,
 		resize: true,
 		anchors: ["page1","page2","page3","page4","page5","page6"],
-		verticalCentered: false,
+		menu:'#menu',
+		verticalCentered: true,
 		afterLoad: function(anchorLink,index){
 			/*$('.welcome').remove();*/
 			/*预加载*/
@@ -14,182 +15,153 @@ $(function(){
 				$(".welcome").css("display","none");
 			},10);
 			if(index==1){
-				$(".header").css({"backgroundColor":"transparent"});	//头部透明
-
-				$(document).ready(function(){
-
-					/* $(".main_visual").hover(function(){
-					 $("#btn_prev,#btn_next").fadeIn()
-					 },function(){
-					 $("#btn_prev,#btn_next").fadeOut()
-					 });*/
-
-					$dragBln = false;
-
-					$(".main_image").touchSlider({
-						flexible : true,
-						speed : 200,
-						btn_prev : $("#btn_prev"),
-						btn_next : $("#btn_next"),
-						paging : $(".flicking_con a"),
-						counter : function (e){
-							$(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
-						}
-					});
-
-					$(".main_image").bind("mousedown", function() {
-						$dragBln = false;
-					});
-
-					$(".main_image").bind("dragstart", function() {
-						$dragBln = true;
-					});
-
-					$(".main_image a").click(function(){
-						if($dragBln) {
-							return false;
-						}
-					});
-
-					timer = setInterval(function(){
-						$("#btn_next").click();
-					}, 5000);
-
-					$(".main_visual").hover(function(){
-						clearInterval(timer);
-					},function(){
-						timer = setInterval(function(){
-							$("#btn_next").click();
-						},5000);
-					});
-
-					$(".main_image").bind("touchstart",function(){
-						clearInterval(timer);
-					}).bind("touchend", function(){
-						timer = setInterval(function(){
-							$("#btn_next").click();
-						}, 5000);
-					});
-
+				$(".header").css({
+					backgroundColor:"transparent",
+					height:'150px'
 				});
-				/*$("aside").css({"top":($(".active").height()-$("aside").height())/2});	//侧边栏定高
-				$("#home_head").css({"margin-top":"15%"});		//头像margin-top改变
-				$("aside a").eq(0).addClass("selected").siblings().removeClass("selected");
-				$("header").animate({opacity:"1"},1000,function(){
-					$("#home_info1").fadeIn(500,function(){
-						$(this).next().animate({width:"800px"},500,function(){
-							$("#home_info2").fadeIn(200,function(){
-								$(this).next().fadeIn(200,function(){
-									$(this).next().fadeIn(200,function(){
-										$(this).next().fadeIn(200,function(){
-											$(this).next().fadeIn(200,function(){
-												$("aside").fadeIn(30);
-											});
-										});
-									});
-								});
-							});
-						});
-					});
+				$('#logo').css({
+					marginTop: '20px'
 				});
-				// 头像切换
-				$("#home_photo2").hover(function(){
-					$(this).fadeTo(800,1);
-				},function(){
-					$(this).stop(true,false).fadeTo(800,0);
-				});*/
+				$('.words').css({
+					marginTop: '40px'
+				});
+				$('.nav li a ').css({
+					fontSize:'22px',
+					lineHeight:'150px',
+					paddingTop:'60px'
+				});
+				$('.phone a').css({
+					fontSize:'22px',
+					lineHeight:'150px',
+					paddingTop:'50px'
+				});
 			}
 			if(index==2){
-				$("aside a").eq(1).addClass("selected").siblings().removeClass("selected");
-				$("#about_content h1").after("<div class='title_en'><h2>· About me ·</h2></div>");
-				$(".title_en").animate({width:"130px"},800,function(){
-					$(".title_en h2").slideDown(400);
-				});
-				$("#about_list_content").css({"opacity":"1"});
-				$("#about_info").animate({width:"800px",marginTop:"0",marginBottom:"0"},700,'easeOutElastic',function(){
-					$("#about_info p").eq(0).animate({bottom:"0"},500,function(){
-						$("#about_info p").eq(1).animate({bottom:"0"},500,function(){
-							$("#about_info p").eq(2).animate({bottom:"0"},500);
-						});
-					});
-				});
+				$(".header").animate({
+					backgroundColor:"#67696a",
+					height:'72px'
+				},'20');
+				$('#logo').animate({
+					marginTop: '2px'
+				},'100');
+				$('.words').animate({
+					marginTop: '0'
+				},'100');
+				$('.nav li a ').animate({
+					fontSize:'20px',
+					lineHeight:'72px',
+					paddingTop:'20px'
+				},'100');
+				$('.phone a').animate({
+					lineHeight:'72px',
+					paddingTop:'0px'
+				},'100');
+				$('.two .box ul.items li i').before('<u class="cl"></u>'+
+				'<u class="cr"></u>')
+
 			}
 			if(index==3){
-				$("aside a").eq(2).addClass("selected").siblings().removeClass("selected");
-				$("#skill_content h1").after("<div class='title_en'><h2>· Skill ·</h2></div>");
-				$(".title_en").animate({width:"130px"},800,function(){
-					$(".title_en h2").slideDown(400);
-				});
-				$(".skill_list_content").addClass("skill_scale");
+				$(".header").animate({
+					backgroundColor:"#67696a",
+					height:'72px'
+				},'20');
+				$('#logo').animate({
+					marginTop: '2px'
+				},'100');
+				$('.words').animate({
+					marginTop: '0'
+				},'100');
+				$('.nav li a ').animate({
+					fontSize:'20px',
+					lineHeight:'72px',
+					paddingTop:'20px'
+				},'100');
+				$('.phone a').animate({
+					lineHeight:'72px',
+					paddingTop:'0px'
+				},'100');
+				$('.container a p').after(
+					'<div class="h-top"><i></i></div>'+
+					'<div class="h-bottom"></div>')
 
-				$(".progress-ring").hover(function(){
-					$(this).siblings(".skill_int").slideDown(400);
-					$(this).siblings(".skill_flag").addClass("skill_flag_scale");
-				},function() {
-					$(this).siblings(".skill_int").slideUp(50);
-					$(this).siblings(".skill_flag").removeClass("skill_flag_scale");
-				});
-
-				$(".progress-ring").loadingRing();
 			}
 
 			if(index==4){
-				$("aside a").eq(3).addClass("selected").siblings().removeClass("selected");
-				$("#demo_content h1").after("<div class='title_en'><h2>· Demo ·</h2></div>");
-				$(".title_en").animate({width:"130px"},800,function(){
-					$(".title_en h2").slideDown(400);
-				});
-				var i=-1;
-				$(".demo_scale").each(function() {
-					var $this=$(this);
-					if(!$this.hasClass("b_to_t")){
-						i++;
-						setTimeout(function(){
-							$this.addClass("b_to_t");
-						},200*i);
-					}
-				})
+				$(".header").animate({
+					backgroundColor:"#67696a",
+					height:'72px'
+				},'20');
+				$('#logo').animate({
+					marginTop: '2px'
+				},'100');
+				$('.words').animate({
+					marginTop: '0'
+				},'100');
+				$('.nav li a ').animate({
+					fontSize:'20px',
+					lineHeight:'72px',
+					paddingTop:'20px'
+				},'100');
+				$('.phone a').animate({
+					lineHeight:'72px',
+					paddingTop:'0px'
+				},'100');
+
 			}
 			if(index==5){
-				$("aside a").eq(4).addClass("selected").siblings().removeClass("selected");
-				$("#contact_content h1").after("<div class='title_en'><h2>· Contact me ·</h2></div>");
-				$(".title_en").animate({width:"130px"},800,function(){
-					$(".title_en h2").slideDown(400);
-				});
-				var i=-1;
-				$("#contact_head1").addClass("b_to_t");
-				$("#contact_head2 span").each(function(){
-					var $this=$(this);
-					if(!$this.hasClass("fade_in")){
-						i++;
-						setTimeout(function(){
-							$this.addClass("fade_in");
-						},400*i);
-					}
-				});
-				var j=-1;
-				setTimeout(function(){
-					$(".contact_scale").each(function(){
-						var $this=$(this);
-						if(!$this.hasClass("fade_in")){
-							j++;
-							setTimeout(function(){
-								$this.addClass("fade_in");
-							},500*j);
-						}
-					});
-				},70);
+				$(".header").animate({
+					backgroundColor:"#67696a",
+					height:'72px'
+				},'20');
+				$('#logo').animate({
+					marginTop: '2px'
+				},'100');
+				$('.words').animate({
+					marginTop: '0'
+				},'100');
+				$('.nav li a ').animate({
+					fontSize:'20px',
+					lineHeight:'72px',
+					paddingTop:'20px'
+				},'100');
+				$('.phone a').animate({
+					lineHeight:'72px',
+					paddingTop:'0px'
+				},'100');
+
 			}
-		},
-		onLeave:function(index , nextIndex, direction){
+			if(index==5){
+				$(".header").animate({
+					backgroundColor:"#67696a",
+					height:'72px'
+				},'20');
+				$('#logo').animate({
+					marginTop: '2px'
+				},'100');
+				$('.words').animate({
+					marginTop: '0'
+				},'100');
+				$('.nav li a ').animate({
+					fontSize:'20px',
+					lineHeight:'72px',
+					paddingTop:'20px'
+				},'100');
+				$('.phone a').animate({
+					lineHeight:'72px',
+					paddingTop:'0px'
+				},'100');
+
+			}
+		}
+		/*onLeave:function(index , nextIndex, direction){
 			if(index==2||index==3||index==4||index==5){
 				$(".title_en").remove();
 			}
-		}
+		}*/
 	});
 
 
-	$.ajax({
+	/*$.ajax({
 		type: "GET",
 		url: "ajax/message.json",
 		dataType: "json",
@@ -215,9 +187,10 @@ $(function(){
 				$("#contact_info").append("<p>"+data.contact_info[i]+"</p>");
 			}
 		}
-	});
+	});*/
 });
 
+/*
 (function ($) {
 	$.fn.loadingRing = function () {
 		var defaultOpt = {
@@ -282,3 +255,4 @@ $(function(){
 		});
 	};
 })(jQuery);
+*/

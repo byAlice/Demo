@@ -7,33 +7,42 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<!--<script src="js/jquery-1.11.2.min.js"></script>-->
-	<script type="text/javascript" src="http://www.5imoban.net/download/jquery/jquery-1.8.3.min.js"></script>
-
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<!--	<script src="http://code.jquery.com/jquery-migrate-1.8.3.min.js"></script>-->
+	<script type="text/javascript" src="js/jquery.color.js"></script>
 	<!--jquery.event.drag-1.5.min.js是鼠标拖动插件，如果不需要，可以删除-->
 	<script type="text/javascript" src="js/jquery.event.drag-1.5.min.js"></script>
 	<script type="text/javascript" src="js/jquery.touchSlider.js"></script>
 
-	<script src="js/jquery.easing.min.js"></script>
+	<!--<script src="js/jquery.easing.min.js"></script>-->
 	<script src="js/jquery.fullPage.min.js"></script>
+
 	<script src="js/index.js"></script>
+	<script src="js/1.js"></script>
+
+
+
+
+
+
 
 </head>
 <body>
 <!-- header navigation -->
-<header class="header">
+<header id="header" class="header">
 	<div id="logo">
 		<div id="header_img"><img src="images/logo.png" alt=""/></div>
 	</div>
 	<span class="words">专注技术开发</span>
 
-	<nav>
-        <ul>
-			<li><a href="">首页</a></li>
-			<li><a href="" >业务</a></li>
-			<li><a href="" >APP案例</a></li>
-			<li><a href="" >硬件案例</a></li>
-			<li><a href="" >服务器案例</a></li>
-			<li><a href="" >微信开发</a></li>
+	<nav class="nav">
+        <ul id="menu">
+			<li data-menuanchor="page1" class="active"><a href="#page1">首页</a></li>
+			<li data-menuanchor="page2"><a href="#page2" >业务</a></li>
+			<li data-menuanchor="page3"><a href="#page3" >APP案例</a></li>
+			<li data-menuanchor="page4"><a href="#page4" >硬件案例</a></li>
+			<li data-menuanchor="page5"><a href="#page5" >服务器案例</a></li>
+			<li data-menuanchor="page6"><a href="#page6" >微信开发</a></li>
         </ul>
     </nav>
 	<div class="phone">
@@ -42,19 +51,11 @@
 	</div>
 </header>
 <!-- header navigation end -->
-<!-- aside navigation -->
-<!--<aside>
-	<a href="#page1"><b>首页</b></a>
-	<a href="#page2"><b>关于我</b></a>
-	<a href="#page3"><b>专业技能</b></a>
-	<a href="#page4"><b>我的作品</b></a>
-	<a href="#page5"><b>联系我</b></a>
-</aside>-->
-<!-- aside navigation end -->
-<!-- home page -->
-<div class="welcome"><p>Loading . . .</p></div>
+
+
+<!--<div class="welcome"><p>Loading . . .</p></div>-->
 <div id="dowebok">
-	<!-- home -->
+	<!-- 首页 -->
 	<div class="section one">
 		<!--轮播图-->
 		<div class="main_visual">
@@ -77,185 +78,133 @@
 							</div>
 						</div>
 					</li>
-					<li class="n2"><span class="img_2"></span></li>
-					<li class="n3"><span class="img_3"></span></li>
-					<li class="n4"><span class="img_4"></span></li>
+					<li class="n2">
+						<span class="img_2"></span>
+						<div class="box">
+							<div class="left"><span>善于思，敏于行</span>
+								<i></i>
+								<p>不是非要完美无缺，只是更加关注细节<br />我们想，更好地为您解决问题</p>
+							</div>
+							<div class="right"></div>
+						</div>
+					</li>
+					<li class="n3">
+						<span class="img_3"></span>
+						<div class="box">
+							<div class="top">精于技，敬于业</div>
+							<div class="mid"></div>
+							<div class="bottom">业界没有最好的技术，只有最棒的技术开发者<br />定制研发，只为您的创意与梦想</div>
+						</div>
+					</li>
+					<li class="n4">
+						<span class="img_4"></span>
+						<div class="box">
+							<div class="top"><span>卓于识，远于见</span><i></i></div>
+							<div class="bottom">全面布局<u>智能硬件</u>与<u>移动APP</u><br />把握未来方向<br />基于<u>多种通信协议</u>，支持各类硬件产品</div>
+						</div>
+					</li>
 				</ul>
 				<a href="javascript:;" id="btn_prev"></a>
 				<a href="javascript:;" id="btn_next"></a>
 			</div>
 		</div>
+		<!--轮播图结束-->
+		<div class="btn-more">
+			<a href="#page2"></a>
+
+		</div>
 </div>>
-	<!-- home end -->
-	<!-- about -->
+	<!-- 首页结束 -->
+	<!-- 业务 -->
 	<div class="section two">
-		<div id="about">
-			<div id="about_content">
-				<div class="title">
-					<h1>关于我</h1>
-				</div>
-				<div id="about_list_content">
-					<div class="about_list" id="about_list1">
-						<div class="about_list_eg" id="about_en_edu">education</div>
-						<div class="about_list_cn" id="about_cn_edu">学历<p>本科</p></div>
-					</div>
-					<div class="about_list">
-						<div class="about_list_eg" id="about_en_age">age</div>
-						<div class="about_list_cn" id="about_cn_age">年龄<p>22岁</p></div>
-					</div>
-					<div class="about_list">
-						<div class="about_list_eg" id="about_en_loc">location</div>
-						<div class="about_list_cn" id="about_cn_loc">坐标<p>长春</p></div>
-					</div>
-					<div class="about_list">
-						<div class="about_list_eg" id="about_en_sta">status</div>
-						<div class="about_list_cn" id="about_cn_sta">状态<p>寻职</p></div>
-					</div>
-				</div>
-				<div id="about_info"></div>
-			</div>
+		<h2>我们能做什么</h2>
+		<div class="box">
+			<ul class="items list-inline">
+				<li class="pc">
+
+					<i></i>
+					<strong>智能硬件开发</strong>
+					<p>提供智能软硬件解决方案<br />开启智能时代</p>
+				</li>
+				<li class="mobi">
+				<i></i><strong>移动端控制开发</strong>
+				<p>移动端接入智能硬件<br />布局移动互联网</p>
+			</li>
+				<li class="sys">
+					<i></i><strong>业务系统研发</strong>
+					<p>基于 B/S 架构的系统研发<br />让业务办公轻松自如</p>
+				</li>
+				<li class="app">
+					<i></i><strong>APP应用程序</strong>
+					<p>基于 iOS / Android 应用开发<br />掌控智能终端时代</p>
+				</li>
+				<li class="host">
+					<i></i><strong>服务器开发</strong>
+					<p>服务器端开发维护<br />引领云时代</p>
+				</li>
+			</ul>
 		</div>
+
 	</div>
-	<!-- about end -->
-	<!-- skill -->
+	<!-- 业务结束 -->
+	<!-- APP案例 -->
 	<div class="section three">
-		<div id="skill">
-			<div id="skill_content">
-				<div class="title">
-					<h1>专业技能</h1>
-				</div>
+		<h2>APP案例</h2>
+		<div class="box">
+			<ul class="items list-inline">
+				<li class="container tour">
+					<a href="#" target="_blank">
+						<img src="picture/ly.jpg" alt="旅游APP" />
+						<p>APP开发<br/>
+							<strong>旅游类APP制作</strong><br/>
+							综合类APP
+						</p>
 
-				<div id="skill_info"></div>
-				<div id="skill_list">
-					<div class="skill_list_content" id="skill_list1">
-						<div class="progress-ring"></div>
-						<div class="skill_name">HTML</div>
-						<div class="skill_flag"></div>
-						<div class="skill_int" id="skill_int1"></div>
-					</div>
-					<div class="skill_list_content" id="skill_list2">
-						<div class="progress-ring" data-precent="70" data-color="#efd1f7,#d632ff" data-duration="4"></div>
-						<div class="skill_name">CSS</div>
-						<div class="skill_flag"></div>
-						<div class="skill_int" id="skill_int2"></div>
-					</div>
-					<div class="skill_list_content" id="skill_list3">
-						<div class="progress-ring" data-precent="65" data-color="#d3e2f7,#4b86db" data-duration="4"></div>
-						<div class="skill_name">JavaScript</div>
-						<div class="skill_flag"></div>
-						<div class="skill_int" id="skill_int3"></div>
-					</div>
-					<div class="skill_list_content" id="skill_list4">
-						<div class="progress-ring" data-precent="60" data-color="#f8d5d5,#ff4242" data-duration="6"></div>
-						<div class="skill_name">jQuery</div>
-						<div class="skill_flag"></div>
-						<div class="skill_int" id="skill_int4"></div>
-					</div>
-				</div>
-			</div>
+					</a>
+
+				</li>
+				<li class="container house">
+					<a href="#" target="_blank">
+					<img src="picture/bondtech.jpg" alt="智能家居APP" />
+					<p>APP开发<br /><strong>智能家居APP</strong><br />智能家居</p>
+						</a>
+				</li>
+				<li class="container beauty">
+					<a href="#" target="_blank">
+					<img src="picture/mr.jpg" alt="美容应用APP" />
+					<p>软件开发<br /><strong>APP开发</strong><br />美容APP应用</p>
+						</a>
+				</li>
+			</ul>
 		</div>
 	</div>
-	<!-- skill end -->
-	<!-- demo -->
+	<!-- APP案例结束 -->
+	<!-- 硬件案例 -->
 	<div class="section four">
-		<div id="demo">
-			<div id="demo_content">
-				<div class="title">
-					<h1>我的作品</h1>
-				</div>
-				<div id="demo_content_list">
-					<ul class="demo_box">
-						<li class="demo_scale">
-							<div class="demo_box_content">
-								<img src="img/works01.jpg" alt="" class="demo_box_bg"/>
-							</div>
-							<div class="demo_box_hover">
-								<p class="demo_box_title">仿堆糖</p>
-								<span class="demo_box_hover_icon">
-                                        <a href="http://byalice.github.io/DailyPractice/ImitateDuiTang/index.html" target="_blank" class="demo_box_link">
-                                            <img src="img/demo-link.png" alt="" />
-                                        </a>
-                                    </span>
-							</div>
-						</li>
-						<li class="demo_scale">
-							<div class="demo_box_content">
-								<img src="img/works02.jpg" alt="" class="demo_box_bg"/>
-							</div>
-							<div class="demo_box_hover">
-								<p class="demo_box_title">仿it修真院</p>
-								<span class="demo_box_hover_icon">
-                                        <a href="http://byalice.github.io/CssPractice/ImitateJnShu/home.html" target="_blank" class="demo_box_link">
-                                            <img src="img/demo-link.png" alt="" />
-                                        </a>
-                                    </span>
-
-
-							</div>
-						</li>
-						<li class="demo_scale">
-							<div class="demo_box_content">
-								<img src="img/works03.jpg" alt="" class="demo_box_bg"/>
-							</div>
-							<div class="demo_box_hover">
-								<p class="demo_box_title">定制箱表单</p>
-								<span class="demo_box_hover_icon">
-                                        <a href="http://byalice.github.io/CssPractice/CustomBox(bootstrap)/index.html" target="_blank" class="demo_box_link">
-                                            <img src="img/demo-link.png" alt="" />
-                                        </a>
-                                    </span>
-
-
-							</div>
-						</li>
-						<li class="demo_scale">
-							<div class="demo_box_content">
-								<img src="img/works04.jpg" alt="" class="demo_box_bg"/>
-							</div>
-							<div class="demo_box_hover">
-								<p class="demo_box_title">2048</p>
-								<span class="demo_box_hover_icon">
-                                        <a href="http://www.byalice.club/2048/index.html" target="_blank" class="demo_box_link">
-                                            <img src="img/demo-link.png" alt="" />
-                                        </a>
-                                    </span>
-							</div>
-						</li>
-
-					</ul>
-				</div>
-				<div id="demo_info" class="demo_scale">
-					<p>这是我的部分demo。</p>
-					<p>更多demo请移步<a href="https://github.com/byAlice" class="md-trigger" target="_blank" data-modal="modal-3">这里</a>。</p>
-				</div>
-			</div>
-		</div>
+		<h2>第4屏</h2>
 	</div>
-	<!-- demo end -->
-	<!-- contact -->
+	<!-- 硬件案例结束 -->
+	<!-- 服务器案例 -->
 	<div class="section five">
-		<div id="contact">
-			<div id="contact_content">
-				<div class="title">
-					<h1>联系我</h1>
-				</div>
-				<div id="contact_head">
-					<div id="contact_head1">灵感 代码 梦想 未来</div>
-					<div id="contact_head2">
-						<span>inspiration</span>
-						<span>code</span>
-						<span>dream</span>
-						<span>future</span>
-					</div>
-				</div>
-				<div id="contact_info" class="contact_scale">
-				</div>
-			</div>
-		</div>
+		<h2>第5屏</h2>
 	</div>
-	<!-- contact end -->
+	<!-- 服务器案例结束 -->
+	<!-- 微信开发 -->
+	<div class="section six">
+		<h2>第6屏</h2>
+	</div>
+	<div class="section seven">
+		<h2>第7屏</h2>
+	</div>
+	<div class="section eight">
+		<h2>第8屏</h2>
+	</div>
+	<div class="section nine">
+		<h2>第9屏</h2>
+	</div>
+	<!-- 微信开发结束 -->
 </div>
-<!-- home page end -->
+
 
 </body>
 </html>
