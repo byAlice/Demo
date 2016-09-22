@@ -20,13 +20,19 @@ $(document).ready(function(){
         counter : function (e){
             $(".flicking_con a").removeClass("on").eq(e.current-1).addClass("on");
             if($('.flicking_con a').eq(0).hasClass('on')){
-                $('.n1 .box .left').animate({
-                    right: '57%',
-                    opacity: 1
+                $('.n1 .box .top').animate({
+                    opacity:'1',
+                    bottom:'60%'
                 },'100');
-                $('.n1 .box .right').animate({
-                    left: '44%',
-                    opacity: 1
+                /*$('.n1 .box .mid').animate({
+                    opacity:'1'
+                },'100');*/
+                $('.n1 .box .mid span').animate({
+                    fontSize:'50px'
+                },'100');
+                $('.n1 .box .bottom').animate({
+                    opacity:'1',
+                    top:'60%'
                 },'100');
             }
             if($('.flicking_con a').eq(1).hasClass('on')){
@@ -52,7 +58,7 @@ $(document).ready(function(){
                     opacity:'1'
                 },'100');
             }
-            if($('.flicking_con a').eq(3).hasClass('on')){
+           /* if($('.flicking_con a').eq(3).hasClass('on')){
                 $('.n4 .box .top').animate({
                     bottom: '50%',
                     opacity:'1'
@@ -61,7 +67,7 @@ $(document).ready(function(){
                     top: '50%',
                     opacity:'1'
                 },'100');
-            }
+            }*/
         }
     });
 

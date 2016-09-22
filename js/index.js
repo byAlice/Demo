@@ -5,17 +5,17 @@ $(function(){
 		scrollingSpeed: 400,
 		css3: true,
 		resize: true,
-		anchors: ["page1","page2","page3","page4","page5","page6"],
+		anchors: ["page1","page2","page3","page4","page5","page6","page7"],
 		menu:'#menu',
 		verticalCentered: true,
 		afterLoad: function(anchorLink,index){
 			/*$('.welcome').remove();*/
 			/*预加载*/
-			setTimeout(function () {
+			/*setTimeout(function () {
 				$(".welcome").css("display","none");
-			},10);
+			},10);*/
 			if(index==1){
-				$(".header").css({
+				/*$(".header").css({
 					backgroundColor:"transparent",
 					height:'150px'
 				});
@@ -34,10 +34,10 @@ $(function(){
 					fontSize:'22px',
 					lineHeight:'150px',
 					paddingTop:'50px'
-				});
+				});*/
 			}
 			if(index==2){
-				$(".header").animate({
+				/*$(".header").animate({
 					backgroundColor:"#67696a",
 					height:'72px'
 				},'20');
@@ -55,103 +55,29 @@ $(function(){
 				$('.phone a').animate({
 					lineHeight:'72px',
 					paddingTop:'0px'
-				},'100');
+				},'100');*/
 				$('.two .box ul.items li i').before('<u class="cl"></u>'+
 				'<u class="cr"></u>')
 
 			}
 			if(index==3){
-				$(".header").animate({
-					backgroundColor:"#67696a",
-					height:'72px'
-				},'20');
-				$('#logo').animate({
-					marginTop: '2px'
-				},'100');
-				$('.words').animate({
-					marginTop: '0'
-				},'100');
-				$('.nav li a ').animate({
-					fontSize:'20px',
-					lineHeight:'72px',
-					paddingTop:'20px'
-				},'100');
-				$('.phone a').animate({
-					lineHeight:'72px',
-					paddingTop:'0px'
-				},'100');
-				$('.container a p').after(
-					'<div class="h-top"><i></i></div>'+
-					'<div class="h-bottom"></div>')
+
 
 			}
 
 			if(index==4){
-				$(".header").animate({
-					backgroundColor:"#67696a",
-					height:'72px'
-				},'20');
-				$('#logo').animate({
-					marginTop: '2px'
-				},'100');
-				$('.words').animate({
-					marginTop: '0'
-				},'100');
-				$('.nav li a ').animate({
-					fontSize:'20px',
-					lineHeight:'72px',
-					paddingTop:'20px'
-				},'100');
-				$('.phone a').animate({
-					lineHeight:'72px',
-					paddingTop:'0px'
-				},'100');
 
 			}
 			if(index==5){
-				$(".header").animate({
-					backgroundColor:"#67696a",
-					height:'72px'
-				},'20');
-				$('#logo').animate({
-					marginTop: '2px'
-				},'100');
-				$('.words').animate({
-					marginTop: '0'
-				},'100');
-				$('.nav li a ').animate({
-					fontSize:'20px',
-					lineHeight:'72px',
-					paddingTop:'20px'
-				},'100');
-				$('.phone a').animate({
-					lineHeight:'72px',
-					paddingTop:'0px'
-				},'100');
 
 			}
-			if(index==5){
-				$(".header").animate({
-					backgroundColor:"#67696a",
-					height:'72px'
-				},'20');
-				$('#logo').animate({
-					marginTop: '2px'
-				},'100');
-				$('.words').animate({
-					marginTop: '0'
-				},'100');
-				$('.nav li a ').animate({
-					fontSize:'20px',
-					lineHeight:'72px',
-					paddingTop:'20px'
-				},'100');
-				$('.phone a').animate({
-					lineHeight:'72px',
-					paddingTop:'0px'
-				},'100');
+			if(index==6){
 
 			}
+			if(index==7){
+
+			}
+
 		}
 		/*onLeave:function(index , nextIndex, direction){
 			if(index==2||index==3||index==4||index==5){
