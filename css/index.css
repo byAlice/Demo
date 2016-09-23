@@ -474,7 +474,7 @@ div.flicking_con a.on {
 	background-color: #e57919;
 }
 /*向下按钮*/
-.btn-more{
+.move-down {
 	position: absolute;
 	bottom: -2%;
 	width: 100%;
@@ -482,7 +482,7 @@ div.flicking_con a.on {
 	z-index: 1111;
 
 }
-.btn-more a{
+.move-down a{
 	position: absolute;
 	display: block;
 	left: 50%;
@@ -493,19 +493,19 @@ div.flicking_con a.on {
 	background: url(../images/spirit-1.png) no-repeat -15px -9px;
 	background-color: #f6e5dd;
 }
-.btn-more a:hover{
+.move-down a:hover{
 	background: url(../images/spirit-1.png) no-repeat -69px -9px;
 	background-color: #e57919;
 }
 /*首页结束*/
-/*业务*/
-.two{
+/*what can we do*/
+.operation {
 	background: url(../images/wallpaper2.jpg) no-repeat;
 	background-size: cover;
 	position: relative;
 
 }
-.two:after{
+.operation:after{
 	content: '';
 	position: absolute;
 	z-index: 1;
@@ -516,7 +516,7 @@ div.flicking_con a.on {
 	background-color: #dbdbdb;
 	opacity: 0.5;
 }
-.caption1{
+.caption-c{
 	width: 100%;
 	height: 100px;
 	position: absolute;
@@ -531,11 +531,12 @@ div.flicking_con a.on {
 	-o-transition: all .5s linear .5s;
 	transition: all .5s linear .5s;
 }
-.two.active .caption1{
+.operation.active .caption-c,
+.services.active .caption-c{
 	-moz-opacity: 1;
 	opacity: 1;
 }
-.caption1 .c-top{
+.caption-c .c-top{
 	display: block;
 	width: 300px;
 	height: 44px;
@@ -545,13 +546,13 @@ div.flicking_con a.on {
 	top: 0;
 	margin-left: -150px;
 }
-.caption1 h2{
+.caption-c h2{
 	position: absolute;
 	top: 46px;
 	width: 100%;
 	text-align: center;
 }
-.caption1 .c-bottom{
+.caption-c .c-bottom{
 	display: block;
 	width: 230px;
 	height: 10px;
@@ -561,68 +562,63 @@ div.flicking_con a.on {
 	bottom: 2px;
 	margin-left: -115px;
 }
-.two .box{
+.operation .box{
 	position: absolute;
 	z-index: 2;
 	top: 300px;
 	box-sizing: border-box;
-	padding: 0 140px;
+	padding: 0 230px;
 }
 /*
-.two .box ul.items {
+.operation .box ul.items {
 
 
 }
 */
 
-.two .box ul.items li {
+.operation .box ul.items li {
 	float: left;
-	width: 200px;
-	height: 350px;
+	width: 210px;
+	height: 280px;
 	margin: 0 8px;
 	background: url(../images/bg-orange.png) no-repeat 0px 400px;
 	overflow: hidden;
 }
 
-.two .box ul.items li i {
+.operation .box ul.items li i {
 	display: block;
 	position: relative;
 	margin: 0 auto;
 	margin-top: 43px;
 	height: 91px;
+
 }
 
-.two .box ul.items li.pc i {
+.operation .box ul.items li.web-can i {
 	width: 91px;
 	background: url(../images/spirit-1.png) no-repeat 0px -75px;
 }
-.two .box ul.items li.mobi i {
-	width: 64px;
-	background: url(../images/words.png) no-repeat -416px -291px;
+.operation .box ul.items li.app-can i {
+	width: 91px;
+	background: url(../images/spirit-1.png) no-repeat 0px -186px;
+}
+.operation .box ul.items li.wechat-can i {
+	width: 94px;
+	background: url(../images/spirit-1.png) no-repeat 0px -308px;
+}
+.operation .box ul.items li.hardware-can i {
+	width: 91px;
+	background: url(../images/spirit-1.png) no-repeat 0px -415px;
 }
 
-.two .box ul.items li.sys i {
-	width: 76px;
-	background: url(../images/words.png) no-repeat -415px -362px;
-}
-
-.two .box ul.items li.app i {
-	width: 74px;
-	background: url(../images/words.png) no-repeat -244px -439px;
-}
-
-.two .box ul.items li.host i {
-	width: 79px;
-	background: url(../images/words.png) no-repeat -420px -439px;
-}
 /*圆环*/
-.two .box ul.items li u {
+.operation .box ul.items li u {
 	display: block;
 	position: absolute;
 	width: 178px;
 	height: 178px;
 	margin-top: -8px;
-	margin-left: 12px;
+	margin-left: 16px;
 	background: url(../images/spirit-2.png) no-repeat 0px -537px;
 	-webkit-transition: all .5s ease-in-out 0s;
 	-moz-transition: all .5s ease-in-out 0s;
@@ -632,39 +628,39 @@ div.flicking_con a.on {
 }
 /*刚进入页面时*/
 /*右半圆*/
-.two .box ul.items li u.cl {
+.operation .box ul.items li u.cl {
 	clip: rect(0px, 178px, 0px, 89px);
 }
 
-.two.active .box ul.items li u.cl {
+.operation.active .box ul.items li u.cl {
 	clip: rect(0px, 178px, 178px, 89px);
 }
 /*左半圆*/
-.two .box ul.items li u.cr {
+.operation .box ul.items li u.cr {
 	clip: rect(178px, 89px, 178px, 0px);
 }
 
-.two.active .box ul.items li u.cr {
+.operation.active .box ul.items li u.cr {
 	clip: rect(0px, 89px, 178px, 0px);
 }
 /*hover时圆环*/
-.two .box ul.items li:hover u.cl {
+.operation .box ul.items li:hover u.cl {
 	clip: rect(0px, 178px, 0px, 89px);
 }
 
-.two .box ul.items li:hover u.cr {
+.operation .box ul.items li:hover u.cr {
 	clip: rect(178px, 89px, 178px, 0px);
 }
 
-.two .box ul.items li strong {
+.operation .box ul.items li strong {
 	display: block;
-	margin-top: 70px;
+	margin-top: 50px;
 	font-size: 16px;
 	font-weight: normal;
 	text-align: center;
 }
 
-.two .box ul.items li p {
+.operation .box ul.items li p {
 	position: relative;
 	top: 200px;
 	color: White;
@@ -674,7 +670,7 @@ div.flicking_con a.on {
 	text-align: center;
 }
 
-.two .box ul.items li:hover {
+.operation .box ul.items li:hover {
 	background-position: 0px 0px;
 	-webkit-transition: all .5s ease-in-out .3s;
 	-moz-transition: all .5s ease-in-out .3s;
@@ -683,7 +679,7 @@ div.flicking_con a.on {
 	transition: all .5s ease-in-out .3s;
 }
 
-.two .box ul.items li:hover i {
+.operation .box ul.items li:hover i {
 	-webkit-transition: all .5s ease-in-out .4s;
 	-moz-transition: all .5s ease-in-out .4s;
 	-ms-transition: all .5s ease-in-out .4s;
@@ -691,27 +687,20 @@ div.flicking_con a.on {
 	transition: all .5s ease-in-out .4s;
 }
 
-.two .box ul.items li.pc:hover i {
+.operation .box ul.items li.web-can:hover i {
 	background: url(../images/spirit-1.png) no-repeat -145px -75px;
 }
-.two .box ul.items li.mobi:hover i {
-	background: url(../images/words.png) no-repeat -337px -291px;
+.operation .box ul.items li.app-can:hover i {
+	background: url(../images/spirit-1.png) no-repeat -145px -186px;
+}
+.operation .box ul.items li.wechat-can:hover i {
+	background: url(../images/spirit-1.png) no-repeat -145px -308px;
+}
+.operation .box ul.items li.hardware-can:hover i {
+	background: url(../images/spirit-1.png) no-repeat -145px -415px;
 }
 
-.two .box ul.items li.sys:hover i {
-	background: url(../images/words.png) no-repeat -327px -362px;
-}
-
-.two .box ul.items li.app:hover i {
-	background: url(../images/words.png) no-repeat -164px -439px;
-}
-
-.two .box ul.items li.host:hover i {
-	background: url(../images/words.png) no-repeat -335px -439px;
-}
-
-
-.two .box ul.items li:hover strong {
+.operation .box ul.items li:hover strong {
 	color: White;
 	-webkit-transition-delay: .4s;
 	-moz-transition-delay: .4s;
@@ -720,7 +709,7 @@ div.flicking_con a.on {
 	transition-delay: .4s;
 }
 
-.two .box ul.items li:hover p {
+.operation .box ul.items li:hover p {
 	top: 20px;
 	-webkit-transition: all .3s ease-in-out .5s;
 	-moz-transition: all .3s ease-in-out .5s;
@@ -728,111 +717,596 @@ div.flicking_con a.on {
 	-o-transition: all .3s ease-in-out .5s;
 	transition: all .3s ease-in-out .5s;
 }
-/*业务结束*/
-/*APP案例*/
-.three{
-	background: url(../images/wallpaper3.jpg);
+/*what can we do end*/
+
+/*web案例*/
+.web,
+.wechat {
+	background: #333333;
+	position: relative;
 }
-.three .box ul.items{
-	width: 100%;
-	margin-top: 100px;
+.web .left,
+.web .right,
+.wechat .left,
+.wechat .right{
+	width: 50%;
+	height: 100%;
 	box-sizing: border-box;
 	padding: 0 140px;
 }
-.three .box ul.items li{
-	float: left;
-	width: 340px;
+.web .left,
+.wechat .left{
+	box-sizing: border-box;
+	padding-right: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;
+/*	-webkit-transition: all .5s ease-in-out 0s;
+	-moz-transition: all .5s ease-in-out 0s;
+	-ms-transition: all .5s ease-in-out 0s;
+	-o-transition: all .5s ease-in-out 0s;
+	transition: all .5s ease-in-out 0s;*/
+}
+
+.web .left ul.list-number,
+.wechat .left ul.list-number{
+	width: 2px;
+	height: 90px;
+	position: absolute;
+	top: 60%;
+	margin-top: -45px;
+	left: 40px;
+}
+.web .left ul.list-number li.list-number-items,
+.wechat .left ul.list-number li.list-number-items{
+	position: relative;
+	display: block;
+	margin: 5px 0;
+	width: 2px;
+	height: 20px;
+	background: #67696d;
+	cursor: pointer;
+}
+.web .left ul.list-number li.list-number-items.active,
+.wechat .left ul.list-number li.list-number-items.active{
+	background: #ee6701;
+}
+
+.web .left .caption-l,
+.wechat .left .caption-l{
+	position: absolute;
+	top: 134px;
+	right: 1080px;
+	-webkit-transition: all .4s ease-in-out .1s;
+	-moz-transition: all .4s ease-in-out .1s;
+	-ms-transition: all .4s ease-in-out .1s;
+	-o-transition: all .4s ease-in-out .1s;
+	transition: all .4s ease-in-out .1s;
+}
+.now .left .caption-l{
+	right: 80px;
+}
+.web .left .caption-l .c-top{
+	display: block;
+	width: 185px;
+	height: 34px;
+	background: url("../images/spirit-2.png") -15px -44px;
+}
+.web .left .caption-l p,
+.wechat .left .caption-l p{
+	color: #ffffff;
+	margin-top: 12px;
+	padding-right: 20px;
+	font-size: 16px;
+	/*font-weight: 100;*/
+	text-align: right;
+}
+.web .left ul.list,
+.wechat .left ul.list{
+	position: absolute;
+	top: 210px;
+	right: 80px;
+}
+.web .left ul.list li,
+.wechat .left ul.list li{
+	position: relative;
+	width: 100%;
+	text-align: right;
+	list-style: none;
+	margin: 50px 0;
+	font-size: 10px;
+	color: #ffffff;
+	line-height: 30px;
+	cursor: pointer;
+}
+.web .left ul.list li.list-items.active,
+.web .left ul.list li.list-items.active strong,
+.wechat .left ul.list li.list-items.active,
+.wechat .left ul.list li.list-items.active strong
+{
+	color: #ee6701;
+}
+
+.list-items:after{
+	content: '';
+	position: absolute;
+	display: block;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	top: 50%;
+	left: 100%;
+	margin-left: 68px;
+	margin-top: -12px;
+	background: url("../images/spirit-2.png") no-repeat -215px -76px;
+}
+.list-items.active:after{
+	background: url("../images/spirit-2.png") no-repeat -215px -111px;
+}
+.web .left ul.list li strong,
+.wechat .left ul.list li strong{
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 40px;
+}
+.web .more a,
+.wechat .more a{
+	position: absolute;
+	bottom: 70px;
+	right: 80px;
+	width: 96px;
+	height: 20px;
+	color: #ee6701;
+}
+.web .right ,
+.wechat .right {
+	background: url("../images/bg3r.png") no-repeat;
+	background-size: cover;
+	position: absolute;
+	right: -50%;
+	top: 0;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-moz-transition: all .3s ease-in-out 0s;
+	-ms-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+}
+.now .right{
+	right: 0;
+
+}
+.web .right:after,
+.wechat .right:after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+	background: #333333;
+
+}
+.web .right ul.list-img,
+.wechat .right ul.list-img{
+	position: absolute;
+	width: 555px;
+	height: 530px;
+	left: 100px;
+	top: 120px;
+	padding: 0;
+	overflow: hidden;
+	z-index: 3;
+}
+.web .right ul.list-img li,
+.wechat .right ul.list-img li{
+	list-style: none;
+	width: 555px;
+	height: 530px;
+	display: none;
+
+}
+.web .right ul.list-img li.block,
+.wechat .right ul.list-img li.block{
+	display: block;
+}
+.web .right ul.list-img li i,
+.wechat .right ul.list-img li i{
+	display: block;
+	width: 555px;
+	height: 530px;
+	z-index: 2;
+}
+.web .right ul.list-img>li:nth-child(1) i{
+	background: url("../picture/web2.png") no-repeat;
+}
+.web .right ul.list-img>li:nth-child(2) i{
+	background: url("../picture/app2.png") no-repeat;
+}
+.web .right ul.list-img>li:nth-child(3) i{
+	background: url("../picture/wechat2.png") no-repeat;
+}
+/*web case end */
+/*webchat case */
+.wechat .left .caption-l .c-top{
+	display: block;
+	width: 244px;
+	height: 33px;
+	background: url("../images/spirit-2.png") -0 -151px;
+}
+
+.wechat .right ul.list-img>li:nth-child(1) i{
+	background: url("../picture/wechat2.png") no-repeat;
+}
+.wechat .right ul.list-img>li:nth-child(2) i{
+	background: url("../picture/app2.png") no-repeat;
+}
+.wechat .right ul.list-img>li:nth-child(3) i{
+	background: url("../picture/web2.png") no-repeat;
+}
+
+
+/*app*/
+.app,
+.hardware {
+	background: url("../images/bg4.jpg");
+	background-size: cover;
+	position: relative;
+}
+.app .left,
+.app .right,
+.hardware .left,
+.hardware .right{
+	width: 50%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0 140px;
+}
+.app .right,
+.hardware .right{
+	box-sizing: border-box;
+	padding-left: 80px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*	-webkit-transition: all .5s ease-in-out 0s;
+        -moz-transition: all .5s ease-in-out 0s;
+        -ms-transition: all .5s ease-in-out 0s;
+        -o-transition: all .5s ease-in-out 0s;
+        transition: all .5s ease-in-out 0s;*/
+}
+
+.app .right ul.list-number,
+.hardware .right ul.list-number{
+	width: 2px;
+	height: 90px;
+	position: absolute;
+	top: 60%;
+	margin-top: -45px;
+	right: 40px;
+}
+.app .right ul.list-number li.list-number-items,
+.hardware .right ul.list-number li.list-number-items{
+	position: relative;
+	display: block;
+	margin: 5px 0;
+	width: 2px;
+	height: 20px;
+	background: #67696d;
+	cursor: pointer;
+}
+.app .right ul.list-number li.list-number-items.active,
+.hardware .right ul.list-number li.list-number-items.active{
+	background: #ee6701;
+}
+
+.app .right .caption-r,
+.hardware .right .caption-r{
+	position: absolute;
+	top: 134px;
+	left: 1080px;
+	-webkit-transition: all .4s ease-in-out .1s;
+	-moz-transition: all .4s ease-in-out .1s;
+	-ms-transition: all .4s ease-in-out .1s;
+	-o-transition: all .4s ease-in-out .1s;
+	transition: all .4s ease-in-out .1s;
+}
+.now .right .caption-r{
+	left: 80px;
+}
+.app .right .caption-r .c-top{
+	display: block;
+	width: 169px;
+	height: 32px;
+	background: url("../images/spirit-2.png") -21px -81px;
+}
+.app .right .caption-r p,
+.hardware .right .caption-r p{
+	color: #ffffff;
+	margin-top: 12px;
+	padding-left: 20px;
+	font-size: 16px;
+	/*font-weight: 100;*/
+	text-align: left;
+}
+.app .right ul.list,
+.hardware .right ul.list{
+	position: absolute;
+	top: 210px;
+	left: 80px;
+}
+.app .right ul.list li,
+.hardware .right ul.list li{
+	position: relative;
+	width: 100%;
+	text-align: left;
+	list-style: none;
+	margin: 50px 0;
+	font-size: 10px;
+	color: #000000;
+	line-height: 30px;
+	cursor: pointer;
+}
+.app .right ul.list li.list-items.active,
+.app .right ul.list li.list-items.active strong,
+.hardware .right ul.list li.list-items.active,
+.hardware .right ul.list li.list-items.active strong
+{
+	color: #ee6701;
+}
+
+.app .right ul.list li.list-items:nth-child(1):before,
+.app .right ul.list li.list-items:nth-child(2):before,
+.hardware .right ul.list li.list-items:nth-child(1):before,
+.hardware .right ul.list li.list-items:nth-child(2):before{
+	content: '';
+	position: absolute;
+	display: block;
+	z-index: 2;
+	width: 1px;
+	height: 96px;
+	top: 0;
+	left: 0;
+	margin-left: -80px;
+	margin-top: 47px;
+	background: #000000;
+}
+
+.app .right ul.list li.list-items:after,
+.hardware .right ul.list li.list-items:after{
+	content: '';
+	position: absolute;
+	display: block;
+	z-index: 2;
+	width: 25px;
+	height: 25px;
+	top: 50%;
+	left: 0;
+	margin-left: -92px;
+	margin-top: -12px;
+	background: url("../images/spirit-2.png") no-repeat -215px -76px;
+}
+.app .right ul.list li.list-items.active:after,
+.hardware .right ul.list li.list-items.active:after{
+	background: url("../images/spirit-2.png") no-repeat -215px -111px;
+}
+.app .right ul.list li strong,
+.hardware .right ul.list li strong{
+	color: #000000;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 40px;
+}
+.app .more a,
+.hardware .more a{
+	position: absolute;
+	bottom: 70px;
+	left: 80px;
+	width: 96px;
+	height: 20px;
+	color: #ee6701;
+}
+.app .left ,
+.hardware .left {
+	position: absolute;
+	left: -50%;
+	top: 0;
+	-webkit-transition: all .3s ease-in-out 0s;
+	-moz-transition: all .3s ease-in-out 0s;
+	-ms-transition: all .3s ease-in-out 0s;
+	-o-transition: all .3s ease-in-out 0s;
+	transition: all .3s ease-in-out 0s;
+}
+.now .left{
+	left: 0;
+}
+/*.app .left:after,
+.hardware .left:after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+	background: #333333;
+
+}*/
+.app .left ul.list-img,
+.hardware .left ul.list-img{
+	position: absolute;
+	width: 555px;
+	height: 530px;
+	right: 100px;
+	top: 120px;
+	padding: 0;
+	overflow: hidden;
+	z-index: 3;
+}
+.app .left ul.list-img li,
+.hardware .left ul.list-img li{
+	list-style: none;
+	width: 555px;
+	height: 530px;
+	display: none;
+
+}
+.app .left ul.list-img li.block,
+.hardware .left ul.list-img li.block{
+	display: block;
+}
+.app .left ul.list-img li i,
+.hardware .left ul.list-img li i{
+	display: block;
+	width: 555px;
+	height: 530px;
+	z-index: 2;
+}
+.app .left ul.list-img>li:nth-child(1) i{
+	background: url("../picture/web2.png") no-repeat;
+}
+.app .left ul.list-img>li:nth-child(2) i{
+	background: url("../picture/app2.png") no-repeat;
+}
+.app .left ul.list-img>li:nth-child(3) i{
+	background: url("../picture/wechat2.png") no-repeat;
+}
+/*web case end */
+
+/*webchat case */
+.hardware .right .caption-r .c-top{
+	display: block;
+	width: 283px;
+	height: 33px;
+	background: url("../images/spirit-2.png") -1px -191px;
+}
+
+.hardware .left ul.list-img>li:nth-child(1) i{
+	background: url("../picture/wechat2.png") no-repeat;
+}
+.hardware .left ul.list-img>li:nth-child(2) i{
+	background: url("../picture/app2.png") no-repeat;
+}
+.hardware .left ul.list-img>li:nth-child(3) i{
+	background: url("../picture/web2.png") no-repeat;
+}
+/* webchat case end */
+
+/* our services */
+.services{
+	background: url("../images/bg7.jpg");
+	background-size: cover;
+	position: relative;
+}
+.services:after{
+	content: '';
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #454545;
+	opacity: 0.5;
+}
+.services ul.list-7{
+	position: relative;
+	margin-top: 240px;
+	width: 100%;
 	height: 300px;
-	background-color: #fff;
+	box-sizing: border-box;
+	padding: 0 200px;
+	z-index: 2;
+}
+.services ul.list-7 li{
+	float: left;
+	position: relative;
+	width: 166px;
+	height: 300px;
 	margin: 0 8px;
 	overflow: hidden;
 }
-.container{
-	position: relative;
-	box-shadow:0 2px 0 #2ed0b8;
-	overflow: hidden;
-	z-index:1;
-}
-.container .h-top{
+.services ul.list-7 li i{
+	display: block;
 	position: absolute;
-	width: 100%;
-	height: 200px;
-	background-color: #1d1d1d;
-	opacity: 0.7;
-	top: -200px;
-	left: 0;
-	-webkit-transition: all .3s ease-in-out 0s;
-	-moz-transition: all .3s ease-in-out 0s;
-	-ms-transition: all .3s ease-in-out 0s;
-	-o-transition: all .3s ease-in-out 0s;
-	transition: all .3s ease-in-out 0s;
-
-}
-.container:hover .h-top{
-	top: 0;
-}
-.container .h-top i{
-	position: absolute;
-	top: 50%;
+	top: 40px;
 	left: 50%;
-	margin-top: -22px;
-	margin-left: -22px;
-	background: url(../images/icons.png) no-repeat 0px -168px;
-
-	display: block;
-	width: 44px;
-	height: 44px;
+	margin-left: -43px;
+	width: 85px;
+	height: 85px;
+	overflow: hidden;
+	z-index: 4;
+	cursor: pointer;
+	-webkit-transition: all .5s ease-in-out 0s;
+	-moz-transition: all .5s ease-in-out 0s;
+	-ms-transition: all .5s ease-in-out 0s;
+	-o-transition: all .5s ease-in-out 0s;
+	transition: all .5s ease-in-out 0s;
 }
-.container .h-bottom{
+.services ul.list-7 li:after{
+	content: '';
 	position: absolute;
-	z-index: -1;
-	width: 100%;
-	height: 100px;
-	background-color: #2ed0b8;
-	bottom: -100px;
+	top: 0;
 	left: 0;
-	-webkit-transition: all .3s ease-in-out 0s;
-	-moz-transition: all .3s ease-in-out 0s;
-	-ms-transition: all .3s ease-in-out 0s;
-	-o-transition: all .3s ease-in-out 0s;
-	transition: all .3s ease-in-out 0s;
+	z-index: 3;
+	width: 165px;
+	height: 165px;
+	background: url("../images/spirit-2.png") no-repeat 0 -724px;
 
 }
-.container:hover .h-bottom{
-	bottom: 0;
+.services ul.list-7 li i.i7-1{
+	background: url("../images/spirit-1.png") no-repeat 0 -531px;
 }
-.container img{
+.services ul.list-7 li i.i7-2{
+	background: url("../images/spirit-1.png") no-repeat 0 -649px;
+}
+.services ul.list-7 li i.i7-3{
+	background: url("../images/spirit-1.png") no-repeat 0 -799px;
+}
+.services ul.list-7 li i.i7-4{
+	background: url("../images/spirit-1.png") no-repeat 0 -908px;
+}
+.services ul.list-7 li i.i7-5{
+	background: url("../images/spirit-1.png") no-repeat 0 -1019px;
+}
+
+.services ul.list-7 li i.i7-1:hover{
+	background: url("../images/spirit-1.png") no-repeat -148px -531px;
+}
+.services ul.list-7 li i.i7-2:hover{
+	background: url("../images/spirit-1.png") no-repeat -148px -649px;
+}
+.services ul.list-7 li i.i7-3:hover{
+	background: url("../images/spirit-1.png") no-repeat -148px -799px;
+}
+.services ul.list-7 li i.i7-4:hover{
+	background: url("../images/spirit-1.png") no-repeat -148px -908px;
+}
+.services ul.list-7 li i.i7-5:hover{
+	background: url("../images/spirit-1.png") no-repeat -148px -1019px;
+}
+
+.services ul.list-7 li p{
+	position: absolute;
 	width: 100%;
-	height: 200px;
+	top: 330px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+	-webkit-transition: all .5s ease-in-out 0s;
+	-moz-transition: all .5s ease-in-out 0s;
+	-ms-transition: all .5s ease-in-out 0s;
+	-o-transition: all .5s ease-in-out 0s;
+	transition: all .5s ease-in-out 0s;
 }
-.container p{
-	display: block;
-	float: left;
-	z-index: 2;
-	color: #9b9b9b;
-	margin-left: 20px;
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 25px;
-	-webkit-transition: all .3s ease-in-out .1s;
-	-moz-transition: all .3s ease-in-out .1s;
-	-ms-transition: all .3s ease-in-out .1s;
-	-o-transition: all .3s ease-in-out .1s;
-	transition: all .3s ease-in-out .1s;
+.now2 ul.list-7 li p{
+	top:200px;
+
 }
-.container:hover p{
-	color: #f1f1f1;
-}
-.container:hover p strong{
-	color: #f1f1f1;
-}
-.container p strong{
-	color: #000000;
-	font-weight: 500;
-	font-size: 16px;
-	-webkit-transition: all .3s ease-in-out .1s;
-	-moz-transition: all .3s ease-in-out .1s;
-	-ms-transition: all .3s ease-in-out .1s;
-	-o-transition: all .3s ease-in-out .1s;
-	transition: all .3s ease-in-out .1s;
+.services ul.list-7 li p strong{
+	color: #ee6701;
+	font-size: 20px;
 }

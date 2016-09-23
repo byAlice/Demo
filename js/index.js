@@ -56,26 +56,53 @@ $(function(){
 					lineHeight:'72px',
 					paddingTop:'0px'
 				},'100');*/
-				$('.two .box ul.items li i').before('<u class="cl"></u>'+
+				$('.operation .box ul.items li i').before('<u class="cl"></u>'+
 				'<u class="cr"></u>')
 
 			}
 			if(index==3){
-
+				$('.web').addClass('now');
+				$('.web .left ul.list>li').click(function () {
+					$(this).addClass('active').siblings().removeClass('active');
+					var i=$('ul.list').find('li').index(this);
+					$('.list-number>li').eq(i).addClass('active').siblings().removeClass('active');
+					$('.list-img>li').eq(i).addClass('block').siblings().removeClass('block');
+				});
 
 			}
 
 			if(index==4){
+				$('.app').addClass('now');
+				$('.app .right ul.list>li').click(function () {
+					$(this).addClass('active').siblings().removeClass('active');
+					var i=$('ul.list').find('li').index(this);
+					$('.list-number>li').eq(i).addClass('active').siblings().removeClass('active');
+					$('.list-img>li').eq(i).addClass('block').siblings().removeClass('block');
+				});
 
 			}
 			if(index==5){
+				$('.wechat').addClass('now');
+				$('.wechat .left ul.list>li').click(function () {
+					$(this).addClass('active').siblings().removeClass('active');
+					var i=$('ul.list').find('li').index(this);
+					$('.list-number>li').eq(i).addClass('active').siblings().removeClass('active');
+					$('.list-img>li').eq(i).addClass('block').siblings().removeClass('block');
+				});
 
 			}
 			if(index==6){
+				$('.hardware').addClass('now');
+				$('.hardware .right ul.list>li').click(function () {
+					$(this).addClass('active').siblings().removeClass('active');
+					var i=$('ul.list').find('li').index(this);
+					$('.list-number>li').eq(i).addClass('active').siblings().removeClass('active');
+					$('.list-img>li').eq(i).addClass('block').siblings().removeClass('block');
+				});
 
 			}
 			if(index==7){
-
+				$('.services').addClass('now2');
 			}
 
 		}
