@@ -104,6 +104,18 @@ $(function(){
 			if(index==7){
 				$('.services').addClass('now2');
 			}
+			if(index==8){
+				$('.partner').addClass('now8');
+			}
+			if(index==9){
+				/*$('.partner').addClass('now8');*/
+			}
+			if(index==10){
+				$('.story').addClass('now10');
+			}
+			if(index==11){
+				$('.contact').addClass('now11');
+			}
 
 		}
 		/*onLeave:function(index , nextIndex, direction){
