@@ -2261,7 +2261,7 @@ div.flicking_con a.on {
 	left:0;
 }
 .contact .box .center{
-	top: -50%;
+	top: -600px;
 	left: 280px;
 	color: #ffffff;
 	-webkit-transition: all .4s ease-in-out 0s;
