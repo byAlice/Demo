@@ -5,7 +5,7 @@ $(function(){
 		scrollingSpeed: 400,
 		css3: true,
 		resize: true,
-		anchors: ["page1","page2","page3","page4","page5","page6","page7"],
+		anchors: ["page1","page2","page3","page4","page5","page6","page7","page8","page9","page10","page11"],
 		menu:'#menu',
 		verticalCentered: true,
 		afterLoad: function(anchorLink,index){
@@ -72,6 +72,7 @@ $(function(){
 			}
 
 			if(index==4){
+                $('#menu li').eq(3).addClass('active');
 				$('.app').addClass('now');
 				$('.app .right ul.list>li').click(function () {
 					$(this).addClass('active').siblings().removeClass('active');
@@ -82,6 +83,7 @@ $(function(){
 
 			}
 			if(index==5){
+                $('#menu li').eq(3).addClass('active');
 				$('.wechat').addClass('now');
 				$('.wechat .left ul.list>li').click(function () {
 					$(this).addClass('active').siblings().removeClass('active');
@@ -92,6 +94,7 @@ $(function(){
 
 			}
 			if(index==6){
+                $('#menu li').eq(3).addClass('active');
 				$('.hardware').addClass('now');
 				$('.hardware .right ul.list>li').click(function () {
 					$(this).addClass('active').siblings().removeClass('active');
@@ -105,10 +108,11 @@ $(function(){
 				$('.services').addClass('now2');
 			}
 			if(index==8){
+                $('#menu li').eq(2).addClass('active');
 				$('.partner').addClass('now8');
 			}
 			if(index==9){
-				/*$('.partner').addClass('now8');*/
+				$('.process').addClass('now9');
 			}
 			if(index==10){
 				$('.story').addClass('now10');
