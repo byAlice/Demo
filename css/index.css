@@ -1,6 +1,9 @@
 ﻿@charset "utf-8";
 
 /* global */
+html{
+	font-size: 62.5%;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -8,7 +11,7 @@
 body {
 	height: 100%;
 	min-width: 950px;
-	font: 18px/1.5 'Helvetica Neue',Helvetica,Arial,sans-serif;
+	font: 1.2rem 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	background: #f2f2f2;
 }
 a {
@@ -54,7 +57,7 @@ nav li {
 }
 nav li a {
 	display: block;
-	font-size: 16px;
+	font-size: 1.6rem;
 	line-height: 74px;
 	position: relative;	
 	color: #c9c9c9;
@@ -114,7 +117,7 @@ nav li a:hover:after {
 	margin-top: -135px;
 	margin-left: -185px;
 	color: #2fd0b5;
-	font-size: 20px;
+	font-size: 2rem;
 	text-align: center;
 	background: url(../images/welcome_words.png) no-repeat;
 	overflow: hidden;
@@ -236,7 +239,7 @@ nav li a:hover:after {
 	z-index: 1000;
 }
 .main_image li.n1 .box .top span {
-	font-size: 36px;
+	font-size: 3.6rem;
 	color: #e57919;
 }
 .main_image li.n1 .box .mid {
@@ -247,7 +250,7 @@ nav li a:hover:after {
 	z-index: 1000;
 }
 .main_image li.n1 .box .mid span {
-	font-size: 36px;
+	font-size: 3.6rem;
 	color: White;
 	-webkit-transition: all .3s linear 0s;
 	-moz-transition: all .3s linear 0s;
@@ -275,8 +278,8 @@ nav li a:hover:after {
 	display: block;
 	width: 46%;
 	margin-left: 30%;
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 1.6rem;
+	line-height: 2.5rem;
 	color: #e57919;
 	border-bottom: 1px solid #e57919;
 }
@@ -314,8 +317,8 @@ li.n2 .box .left{
 
 li.n2 .box .left span {
 	margin-top: 20%;
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 3.6rem;
+	line-height: 3.6rem;
 	color: White;
 }
 li.n2 .box .left i {
@@ -326,14 +329,14 @@ li.n2 .box .left i {
 }
 li.n2 .box .left p {
 	margin-top: 20px;
-	font-size: 16px;
-	line-height: 25px;
+	font-size: 1.6rem;
+	line-height: 2.5rem;
 	color: #ccc;
 }
 
 /*第三张*/
 li.n3 .box .top{
-	font-size: 80px;
+	font-size: 8rem;
 	color: White;
 	margin-top: 15%;
 	text-align: center;
@@ -364,8 +367,8 @@ li.n3 .box .top{
 .n3 .box .bottom {
 	width: 100%;
 	color: #ccc;
-	font-size: 16px;
-	line-height: 30px;
+	font-size: 1.6rem;
+	line-height: 3rem;
 	text-align: center;
 	-moz-opacity: 0;
 	opacity: 0;
@@ -561,7 +564,7 @@ div.flicking_con a.on {
 .caption-c p{
 	position: absolute;
 	width: 100%;
-	font-size: 16px;
+	font-size: 1.6rem;
 	height: 20px;
 	text-align: center;
 }
@@ -683,7 +686,7 @@ div.flicking_con a.on {
 .operation .box ul.items li strong {
 	display: block;
 	margin-top: 50px;
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: normal;
 	text-align: center;
 }
@@ -693,8 +696,8 @@ div.flicking_con a.on {
 	top: 200px;
 	color: White;
 	font-family: Arial, "宋体";
-	font-size: 12px;
-	line-height: 20px;
+	font-size: 1.2rem;
+	line-height: 2rem;
 	text-align: center;
 }
 
@@ -822,7 +825,7 @@ div.flicking_con a.on {
 	color: #ffffff;
 	margin-top: 12px;
 	padding-right: 20px;
-	font-size: 16px;
+	font-size: 1.6rem;
 	text-align: right;
 }
 .web .left ul.list,
@@ -838,7 +841,7 @@ div.flicking_con a.on {
 	text-align: right;
 	list-style: none;
 	margin: 50px 0;
-	font-size: 10px;
+	font-size: 1rem;
 	color: #ffffff;
 	line-height: 30px;
 	cursor: pointer;
@@ -872,7 +875,7 @@ div.flicking_con a.on {
 .web .left ul.list li strong,
 .wechat .left ul.list li strong{
 	color: #ffffff;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 500;
 	line-height: 40px;
 }
@@ -1072,7 +1075,7 @@ div.flicking_con a.on {
 	color: #000000;
 	margin-top: 12px;
 	padding-left: 20px;
-	font-size: 16px;
+	font-size: 1.6rem;
 	/*font-weight: 100;*/
 	text-align: left;
 }
@@ -1089,7 +1092,7 @@ div.flicking_con a.on {
 	text-align: left;
 	list-style: none;
 	margin: 50px 0;
-	font-size: 10px;
+	font-size: 1rem;
 	color: #000000;
 	line-height: 30px;
 	cursor: pointer;
@@ -1140,7 +1143,7 @@ div.flicking_con a.on {
 .app .right ul.list li strong,
 .hardware .right ul.list li strong{
 	color: #000000;
-	font-size: 20px;
+	font-size: 2rem;
 	font-weight: 500;
 	line-height: 40px;
 }
@@ -1351,7 +1354,7 @@ div.flicking_con a.on {
 	top: 330px;
 	text-align: center;
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 1.4rem;
 	-webkit-transition: all .5s ease-in-out 0s;
 	-moz-transition: all .5s ease-in-out 0s;
 	-ms-transition: all .5s ease-in-out 0s;
@@ -1364,7 +1367,7 @@ div.flicking_con a.on {
 }
 .services ul.list-7 li p strong{
 	color: #ee6701;
-	font-size: 20px;
+	font-size: 2rem;
 }
 /* our services end */
 
@@ -1641,6 +1644,34 @@ div.flicking_con a.on {
 	position: absolute;
 	list-style: none;
 }
+
+.process .box ul.items li.p9-1:hover,
+.process .box ul.items li.p9-9:hover{
+	box-shadow: 0 0 50px #64a6db;
+}
+.process .box ul.items li.p9-2:hover{
+	box-shadow: 0 0 50px #188dd6;
+}
+.process .box ul.items li.p9-3:hover{
+	box-shadow: 0 0 50px #6688ba;
+}
+.process .box ul.items li.p9-4:hover{
+	box-shadow: 0 0 50px #3fb366;
+}
+.process .box ul.items li.p9-5:hover{
+	box-shadow: 0 0 50px #9966bb;
+}
+.process .box ul.items li.p9-6:hover{
+	box-shadow: 0 0 50px #ec7853;
+}
+.process .box ul.items li.p9-7:hover{
+	box-shadow: 0 0 50px #a78025;
+}
+.process .box ul.items li.p9-8:hover{
+	box-shadow: 0 0 50px #3fb366;
+}
+
+
 .process .box ul.items li.p9-1,
 .process .box ul.items li.p9-9{
 	width: 150px;
@@ -2019,7 +2050,7 @@ div.flicking_con a.on {
 }
 .process .box ul.items li span{
 	color: #ffffff;
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 400;
 	display: block;
 	position: absolute;
@@ -2032,12 +2063,12 @@ div.flicking_con a.on {
 .process .box ul.items li.p9-2 span{
 	bottom: 10px;
 	left: 25px;
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 .process .box ul.items li.p9-3 span{
 	bottom: 10px;
 	left: 35px;
-	font-size: 14px;
+	font-size: 1.4rem;
 }
 .process .box ul.items li.p9-4 span{
 	bottom: 14px;
@@ -2054,7 +2085,7 @@ div.flicking_con a.on {
 .process .box ul.items li.p9-7 span{
 	bottom: 10px;
 	left: 38px;
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 .process .box ul.items li.p9-8 span{
 	bottom: 14px;
@@ -2106,31 +2137,6 @@ div.flicking_con a.on {
 	margin-top: -35px;
 }
 
-.process .box ul.items li.p9-1:hover,
-.process .box ul.items li.p9-9:hover{
-	box-shadow: 0 0 30px #64a6db;
-}
-.process .box ul.items li.p9-2:hover{
-	box-shadow: 0 0 30px #188dd6;
-}
-.process .box ul.items li.p9-3:hover{
-	box-shadow: 0 0 30px #6688ba;
-}
-.process .box ul.items li.p9-4:hover{
-	box-shadow: 0 0 30px #3fb366;
-}
-.process .box ul.items li.p9-5:hover{
-	box-shadow: 0 0 30px #9966bb;
-}
-.process .box ul.items li.p9-6:hover{
-	box-shadow: 0 0 30px #ec7853;
-}
-.process .box ul.items li.p9-7:hover{
-	box-shadow: 0 0 30px #a78025;
-}
-.process .box ul.items li.p9-8:hover{
-	box-shadow: 0 0 30px #3fb366;
-}
 
 
 /* process concept end */
@@ -2308,8 +2314,8 @@ div.flicking_con a.on {
 }
 .contact .box .right p{
 	color: #ffffff;
-	font-size: 18px;
-	line-height: 34px;
+	font-size: 1.8rem;
+	line-height: 3.4rem;
 }
 .contact .footer{
 	width: 100%;
@@ -2326,8 +2332,8 @@ div.flicking_con a.on {
 	margin: 0 auto;
 	color: #ffffff;
 	text-align: center;
-	font-size: 18px;
-	line-height: 60px;
+	font-size: 1.8rem;
+	line-height: 6rem;
 
 }
 /* contact end */
